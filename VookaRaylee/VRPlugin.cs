@@ -1,5 +1,7 @@
 ﻿using IllusionPlugin;
 using System;
+using System.Diagnostics;
+using System.Linq;
 using VRGIN.Core;
 using VRGIN.Helpers;
 using VRGIN.Modes;
@@ -26,7 +28,11 @@ namespace VookaRaylee
 
         public void OnApplicationStart()
         {
-            if (Environment.CommandLine.Contains("--vr"))
+            bool steamVrRunning = Process.GetProcesses().Any(process => process.ProcessName == "vrserver");
+            bool vrDeactivated = Environment.CommandLine.Contains("--novr");
+            bool vrActivated = Environment.CommandLine.Contains("--vr");
+
+            if (vrActivated || (!vrDeactivated && steamVrRunning))
             {
                 var context = new VookaContext();
                 VRManager.Create<RayleeInterpreter>(context);
@@ -35,12 +41,15 @@ namespace VookaRaylee
         }
 
         public void OnLevelWasInitialized(int level) {
-            // Makes sure that the menu won't freeze everything VR-related
-            SteamVR_Render.instance.tag = "DoNotPause";
-            VR.Camera.Origin.tag = "DoNotPause";
-            foreach(var el in VR.Camera.Origin.Descendants())
+            if (VR.Active)
             {
-                el.tag = "DoNotPause";
+                // Makes sure that the menu won't freeze everything VR-related
+                SteamVR_Render.instance.tag = "DoNotPause";
+                VR.Camera.Origin.tag = "DoNotPause";
+                foreach (var el in VR.Camera.Origin.Descendants())
+                {
+                    el.tag = "DoNotPause";
+                }
             }
         }
 
