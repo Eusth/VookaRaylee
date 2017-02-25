@@ -1,7 +1,6 @@
 # VookaRaylee
 
-VR mod for the Yooka-Laylee Toybox.
-
+VR mod for the Yooka-Laylee Toybox. ([Example video](https://youtu.be/_BGPl_HCdcY))
 ## Installing
 
 1. Download the latest release from [the release page](https://github.com/Eusth/VookaRaylee/releases)
