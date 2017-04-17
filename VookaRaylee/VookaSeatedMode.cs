@@ -8,8 +8,9 @@ namespace VookaRaylee
     public class VookaSeatedMode : SeatedMode
     {
         VignetteAndChromaticAberration _Vignette;
-        private float MIN_VIGNETTING = 0f;
-        private float MAX_VIGNETTING = 40f;
+        private const float ANGULAR_THRESHOLD = 1f;
+        private float MIN_VIGNETTING = 10f;
+        private float MAX_VIGNETTING = 50f;
         private float _TargetVignetting = 0f;
         private bool _VignettingEnabled = false;
 
@@ -54,9 +55,9 @@ namespace VookaRaylee
             if (_VignettingEnabled)
             {
                 var postRot = VR.Camera.SteamCam.origin.transform.eulerAngles;
-                var angularVelocity = (postRot.y - prevRot.y) / Time.deltaTime;
-
-                _TargetVignetting = Mathf.Lerp(MIN_VIGNETTING, MAX_VIGNETTING, Mathf.Abs(angularVelocity) / 360f);
+                var angularVelocity = Mathf.Abs((postRot.y - prevRot.y) / Time.deltaTime);
+                
+                _TargetVignetting = angularVelocity < ANGULAR_THRESHOLD ? 0 : Mathf.Lerp(MIN_VIGNETTING, MAX_VIGNETTING, angularVelocity / 180f);
                 UpdateVignette();
 
             }
