@@ -35,6 +35,10 @@
       <HintPath>..\Libs\Assembly-Csharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\Libs\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="IllusionPlugin">
       <HintPath>..\Libs\IllusionPlugin.dll</HintPath>
       <Private>False</Private>
