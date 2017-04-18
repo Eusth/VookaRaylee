@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics;
 using System.Linq;
+using UnityEngine;
 using VRGIN.Core;
 using VRGIN.Helpers;
 using VRGIN.Modes;
@@ -37,6 +38,8 @@ namespace VookaRaylee
                 var context = new VookaContext();
                 VRManager.Create<RayleeInterpreter>(context);
                 VR.Manager.SetMode<VookaSeatedMode>();
+
+                SteamVR_Render.instance.lockPhysicsUpdateRateToRenderFrequency = false;
             }
         }
 
