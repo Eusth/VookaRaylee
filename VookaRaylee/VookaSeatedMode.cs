@@ -59,7 +59,6 @@ namespace VookaRaylee
                 
                 _TargetVignetting = angularVelocity < ANGULAR_THRESHOLD ? 0 : Mathf.Lerp(MIN_VIGNETTING, MAX_VIGNETTING, angularVelocity / 180f);
                 UpdateVignette();
-
             }
             //if (VR.Camera.HasValidBlueprint)
             //{
