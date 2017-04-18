@@ -19,13 +19,12 @@ In addition to the traditional game controls, you have a number of VR-specific c
 
 |Key|Action|
 |---|------|
-|<kbd>Backspace</kbd>|Reset view|
+|<kbd>Backspace</kbd> / <kbd>Right Stick</kbd> (1.5s)|Recenter view|
 |<kbd>Insert</kbd>|Apply image effects (Anti-Aliasing, etc.)|
 |<kbd>F4</kbd>|Change GUI projection mode|
 |<kbd>LT</kbd>+<kbd>D-Up</kbd><br><kbd>LT</kbd>+<kbd>D-Down</kbd>|Move GUI up / down|
 |<kbd>RT</kbd>+<kbd>D-Up</kbd><br><kbd>RT</kbd>+<kbd>D-Down</kbd>|Move GUI away / closer|
 |<kbd>LT</kbd>/<kbd>RT</kbd>+<kbd>D-Left</kbd><br><kbd>LT</kbd>/<kbd>RT</kbd>+<kbd>D-Right</kbd>|Rotate GUI left / right|
-|<kbd>RS</kbd> (1.5s)|Recenter view|
 
 More are to be found in the file *vr_settings.xml*. Most notably, you can change the scale to your own liking and toggle the vignetting.
 
