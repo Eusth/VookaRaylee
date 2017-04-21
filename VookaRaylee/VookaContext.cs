@@ -16,6 +16,14 @@ namespace VookaRaylee
             _Settings = VRSettings.Load<RayleeSettings>("vr_settings.xml");
         }
 
+        public bool ConfineMouse
+        {
+            get
+            {
+                return false;
+            }
+        }
+
         public bool EnforceDefaultGUIMaterials
         {
             get
@@ -135,6 +143,8 @@ namespace VookaRaylee
                 return typeof(VoiceCommand);
             }
         }
+
+
         
     }
 }
