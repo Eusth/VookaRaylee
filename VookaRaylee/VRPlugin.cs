@@ -49,6 +49,7 @@ namespace VookaRaylee
                 // Makes sure that the menu won't freeze everything VR-related
                 SteamVR_Render.instance.tag = "DoNotPause";
                 VR.Camera.Origin.tag = "DoNotPause";
+
                 foreach (var el in VR.Camera.Origin.Descendants())
                 {
                     el.tag = "DoNotPause";
