@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRGIN", "VRGIN\VRGIN\VRGIN.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRActivator", "VRActivator\VRActivator.csproj", "{08D684FB-9A57-4881-9668-56992667DD14}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToggleGPUJobs", "ToggleGPUJobs\ToggleGPUJobs.csproj", "{BC959B69-5DA8-4283-ADD5-8E0F1CF032FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{08D684FB-9A57-4881-9668-56992667DD14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08D684FB-9A57-4881-9668-56992667DD14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08D684FB-9A57-4881-9668-56992667DD14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC959B69-5DA8-4283-ADD5-8E0F1CF032FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC959B69-5DA8-4283-ADD5-8E0F1CF032FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC959B69-5DA8-4283-ADD5-8E0F1CF032FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC959B69-5DA8-4283-ADD5-8E0F1CF032FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
