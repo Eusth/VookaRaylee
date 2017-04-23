@@ -24,6 +24,8 @@ namespace VookaRaylee
             {
                 InstallVignetting();
             }
+
+            gameObject.AddComponent<RayleeControls>();
         }
 
         private void InstallVignetting()
